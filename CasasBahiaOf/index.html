@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Loja Oficial — Ofertas Black</title>
+  <head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Loja Oficial — Ofertas Black</title>
+
+<!-- 🔹 Favicons -->
+<link rel="icon" type="image/png" href="png/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="png/favicon.svg" />
+<link rel="shortcut icon" href="png/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="png/apple-touch-icon.png" />
+<link rel="manifest" href="png/site.webmanifest" />
+
+  <!-- 🔹 Descrição e SEO -->
+  <meta name="description" content="Ofertas Black — eletrônicos com atendimento rápido no WhatsApp." />
+
+  <!-- 🔹 Estilos -->
+  <link rel="stylesheet" href="styles.css"/>
+
+  <!-- 🔹 Scripts e pixels -->
+  <script>
+    // seu script aqui
+  </script>
+</head>
+
+  <link rel="stylesheet" href="styles.css"/>
+
+  <!-- (Opcional) SEO mínimo -->
+  <meta name="description" content="Ofertas Black — eletrônicos com atendimento rápido no WhatsApp. "/>
+  <link rel="icon" href="favicon.ico"/>
+
+  <!-- Consent + loaders (pixel só após consentimento) -->
+  <script>
+    function setCookieConsent(v){ try{ localStorage.setItem('cookieConsent', v); }catch(e){} }
+    function getCookieConsent(){ try{ return localStorage.getItem('cookieConsent'); }catch(e){ return null; } }
+
+    function loadMetaPixel(id){
+      if(!id || window.fbq) return;
+      !function(f,b,e,v,n,t,s){
+        if(f.fbq) return; n=f.fbq=function(){ n.callMethod ? n.callMethod.apply(n,arguments) : n.queue.push(arguments) };
+        if(!f._fbq) f._fbq=n; n.push=n; n.loaded=!0; n.version='2.0'; n.queue=[];
+        t=b.createElement(e); t.async=!0; t.src=v; s=b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t,s);
+      }(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', id);
+      fbq('track','PageView');
+    }
+
+    function loadGtag(id){
+      if(!id || window.gtag) return;
+      var s=document.createElement('script'); s.async=true; s.src='https://www.googletagmanager.com/gtag/js?id='+id;
+      document.head.appendChild(s);
+      window.dataLayer=window.dataLayer||[];
+      function gtag(){ dataLayer.push(arguments); }
+      window.gtag=gtag; gtag('js', new Date()); gtag('config', id, {send_page_view:false});
+    }
+
+    function loadMarketingPixelsIfConsented(){
+      if(getCookieConsent()!=='marketing') return;
+      // >>> Troque quando for ativar:
+      var META_PIXEL_ID = 'SEU_META_PIXEL_ID';   // ex: 123456789012345
+      var GA4_ID        = 'G-SEU-GA4-ID';        // ex: G-ABCDEF1234
+      loadMetaPixel(META_PIXEL_ID);
+      loadGtag(GA4_ID);
+    }
+
+    document.addEventListener('DOMContentLoaded', function(){
+      if(getCookieConsent()==='marketing') loadMarketingPixelsIfConsented();
+    });
+  </script>
+</head>
+<body>
+
+  <!-- Cookie banner -->
+  <div id="cookie-banner" class="cookie-banner" role="dialog" aria-live="polite">
+    <div class="cookie-text">
+      Usamos cookies para melhorar sua experiência e, com seu consentimento, para anúncios personalizados.
+      <a href="privacy.html" target="_blank" rel="noopener">Política de Privacidade</a>.
+    </div>
+    <div class="cookie-actions">
+      <button id="cookie-reject" class="btn-ghost">Recusar</button>
+      <button id="cookie-accept" class="btn-primary">Aceitar</button>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('cookie-accept').addEventListener('click', function(){
+      setCookieConsent('marketing');
+      document.getElementById('cookie-banner').style.display='none';
+      loadMarketingPixelsIfConsented();
+    });
+    document.getElementById('cookie-reject').addEventListener('click', function(){
+      setCookieConsent('essential');
+      document.getElementById('cookie-banner').style.display='none';
+    });
+  </script>
+
+  <!-- INÍCIO (se puder, renomeie o arquivo para INICIO.png para evitar treta com acento) -->
+  <div class="row"><img src="png/INÍCIO.png" alt="Início"></div>
+
+  <!-- SLIDER -->
+  <div class="row slider-wrap">
+    <div class="slider" id="slider" aria-live="polite"></div>
+  </div>
+
+  <!-- Vitrine com 5 áreas clicáveis -->
+  <div class="row map-wrap">
+    <img src="png/IMAGENS.png" alt="Imagens (clique em uma área abaixo)">
+    <div class="map-buttons" id="mapButtons" aria-hidden="false">
+      <button data-index="0" aria-label="Mostrar imagem 1"></button>
+      <button data-index="1" aria-label="Mostrar imagem 2"></button>
+      <button data-index="2" aria-label="Mostrar imagem 3"></button>
+      <button data-index="3" aria-label="Mostrar imagem 4"></button>
+      <button data-index="4" aria-label="Mostrar imagem 5"></button>
+    </div>
+  </div>
+
+  <!-- Blocos -->
+  <div class="row"><img src="png/CARACTERISTICAS.png" alt="Características"></div>
+  <div class="row"><img src="png/AVAECOMPRA2.png" alt="Etapas de compra"></div>
+
+  <!-- CTA Instagram -->
+  <div class="row link-wrap">
+    <a class="insta-link" href="https://resumopedido.netlify.app/" data-href="https://resumopedido.netlify.app/" aria-label="Abrir Instagram">
+      <img src="png/AVAECOMPRA.png" alt="Comprar pelo Instagram">
+    </a>
+  </div>
+
+  <div class="row"><img src="png/AVAECOMPRA3.png" alt="Ava e compra3"></div>
+  <div class="row"><img src="png/ESPECIF.png" alt="Especificações"></div>
+  <div class="row"><img src="png/AVALIAÇÕES.png" alt="Avaliações"></div>
+  <div class="row"><img src="png/AVA1.png" alt="Ava 1"></div>
+  <div class="row"><img src="png/AVA2.png" alt="Ava 2"></div>
+  <div class="row"><img src="png/AVA3.png" alt="Ava 3"></div>
+  <div class="row"><img src="png/RESUMOAVA.png" alt="Resumo Avaliações"></div>
+
+  <!-- Central de Vendas (CTA principal) -->
+  <div class="row central-wrap">
+    <img src="png/CENTRAL.png" alt="Central de vendas e atendimento">
+    <a class="central-btn"
+       href="https://wa.me/5511930441395?text=Ol%C3%A1%2C%20tenho%20interesse"
+       target="_blank" rel="noopener noreferrer"
+       aria-label="Abrir WhatsApp - Central de Vendas"></a>
+  </div>
+
+  <div class="row"><img src="png/FINAL.png" alt="Final"></div>
+
+  <!-- Whats flutuante (com o nome que você pediu) -->
+  <a id="whats-float"
+     href="https://wa.me/5511930441395?text=Ol%C3%A1%2C%20tenho%20interesse%20nos%20produtos%20da%20Black%20Friday..%20"
+     target="_blank" rel="noopener noreferrer" aria-label="Abrir WhatsApp">
+    <img src="png/WHATS.png.png" alt="WhatsApp"/>
+  </a>
+
+  <!-- Tracking do Whats flutuante -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function(){
+      var w = document.getElementById('whats-float');
+      if(!w) return;
+      w.addEventListener('click', function(){
+        if(window.fbq) fbq('track','Contact',{ method:'WhatsApp', placement:'float_button' });
+        if(window.gtag) gtag('event','contact',{ method:'whatsapp', placement:'float_button' });
+      });
+    });
+  </script>
+
+  <!-- Seu JS principal -->
+  <script src="main.js" defer></script>
+</body>
+</html>

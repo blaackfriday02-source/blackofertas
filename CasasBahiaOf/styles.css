@@ -1,0 +1,275 @@
+:root {
+  --transition-time: 420ms;
+  --slider-fade: 600ms;
+  --button-scale: 1.13;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+  -webkit-tap-highlight-color: transparent;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Cookie banner */
+.cookie-banner {
+  position: fixed;
+  bottom: 18px;
+  left: 18px;
+  right: 18px;
+  max-width: 950px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 8px;
+  padding: 14px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, .15);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.cookie-text {
+  flex: 1;
+  font-size: 14px;
+  color: #222;
+}
+
+.cookie-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-ghost {
+  background: #eee;
+  border: 0;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: #0033c6;
+  color: #fff;
+  border: 0;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* layout das imagens */
+.row {
+  width: 100%;
+  display: block;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+}
+
+.row img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  vertical-align: middle;
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
+/* slider */
+.slider-wrap {
+  max-width: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+  background: #fff;
+  transition: height 240ms ease;
+  min-height: 60px;
+}
+
+.slide {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity var(--slider-fade) ease;
+  pointer-events: none;
+}
+
+.slide img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.slide.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* vitrine clicável */
+.map-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+}
+
+.map-buttons {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  gap: 0;
+  align-items: center;
+  justify-content: space-between;
+  pointer-events: auto;
+}
+
+.map-buttons button {
+  flex: 1 1 0;
+  background: transparent;
+  border: 0;
+  height: 100%;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+}
+
+.map-buttons button:focus {
+  outline: 3px solid rgba(255, 255, 255, .12);
+  outline-offset: -6px;
+  border-radius: 0;
+}
+
+/* instagram CTA */
+.link-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  overflow: visible;
+}
+
+.insta-link {
+  display: block;
+  width: 100%;
+  height: auto;
+  position: relative;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+  will-change: transform;
+}
+
+.insta-link img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform var(--transition-time) ease, box-shadow var(--transition-time) ease;
+  transform-origin: center center;
+}
+
+.insta-link.touch-expand img,
+.insta-link.expand-click img,
+.insta-link:hover img {
+  transform: scale(var(--button-scale));
+  box-shadow: 0 14px 32px rgba(0, 0, 0, .35);
+}
+
+/* central de vendas */
+.central-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+}
+
+.central-wrap img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.central-btn {
+  position: absolute;
+  left: 6%;
+  right: 6%;
+  top: 10%;
+  height: 80%;
+  display: block;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  z-index: 6;
+  transition: transform 180ms ease;
+  transform-origin: center center;
+}
+
+.central-btn:focus {
+  box-shadow: 0 0 0 3px rgba(21, 156, 228, .18);
+  border-radius: 6px;
+}
+
+.central-btn.touch-expand,
+.central-btn.expand-click,
+.central-btn:hover {
+  transform: scale(1.03);
+}
+
+/* Whats flutuante */
+#whats-float {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  width: 60px;
+  height: 60px;
+  z-index: 99999;
+  display: inline-block;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, .25);
+  transition: transform .18s ease;
+}
+
+#whats-float img {
+  width: 80%;
+  height: 80%;
+  margin: 10%;
+  object-fit: contain;
+  display: block;
+}
+
+#whats-float:hover {
+  transform: translateY(-6px);
+}
+
+@media (max-width:420px) {
+  #whats-float {
+    width: 54px;
+    height: 54px;
+    right: 12px;
+    bottom: 12px;
+  }
+}
